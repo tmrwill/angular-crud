@@ -1,0 +1,43 @@
+body {
+  background-color: #eee;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.box-container {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container .box-container-sideBar {
+  flex-basis: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: burlywood;
+  list-style: none;
+}
+
+.box-container .box-container-area {
+  flex-basis: 80%;
+  height: 100%;
+  background-color: darkgrey;
+}
+

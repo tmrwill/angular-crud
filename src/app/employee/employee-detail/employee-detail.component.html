@@ -1,0 +1,32 @@
+<br>
+<div class="">
+    <button [routerLink]="['']" class="bg-gray-500 hover:bg-gray-700 text-white py-1 px-2 rounded">back</button>
+</div>
+
+<div class="flex justify-end mr-5">
+    <input type="text">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded">
+        Search
+    </button>
+</div>
+
+<div class="flex justify-center h-full">
+    <div [formGroup]="personalform" >    
+        <div class="flex justify-end items-end">
+            <button (click)="addRow()" class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded">Add</button>
+        </div>      
+        <div>
+            <label>Name:</label>
+            <input type="text" formControlName="putname">
+            <label>Email:</label>
+            <input type="email" formControlName="putemail">
+            <label>Call:</label>
+            <input type="text" formControlName="putcalled">
+        </div>
+
+        <!-- <div class="flex justify-center" *ngIf="saveRow">
+            <button (click)="saveRow()" class="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded">Save</button>
+            <button (click)="cancel()" class="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded">Cancel</button>
+        </div> -->
+    </div>
+</div>

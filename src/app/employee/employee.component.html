@@ -1,0 +1,27 @@
+
+<br><div class="flex justify-end mr-5">
+    <button [routerLink]="['employeeDetail']" routerLinkActive="router-Link-Active" class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded" >
+        Add
+    </button>
+</div><br>
+
+  <table>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Called</th>
+      <th>Action</th>
+    </tr>
+    <tbody *ngFor="let data of dataArray; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ data.putname }}</td>
+      <td>{{ data.putemail }}</td>
+      <td>{{ data.putcalled }}</td>
+      <td>
+        <button [routerLink]="['employeeDetail']" [state]="{employee: data}">Edit</button>
+        <button (click)="deleteRow(i)">Delete</button>
+     </td>
+    </tbody>
+  </table>
+
